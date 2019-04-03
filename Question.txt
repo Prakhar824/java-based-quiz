@@ -1,0 +1,10 @@
+who is the present Prime Minister of India?
+(a) Jawahar lal Nehru
+(b) Narendra Modi
+(c) Pratibha patil
+(d) Shraddha Saini
+in which language this program is written?
+(a) c
+(b) c++
+(c) java
+(d) python
