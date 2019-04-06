@@ -8,3 +8,8 @@ in which language this program is written?
 (b) c++
 (c) java
 (d) python
+Which is not object oriented programming language?
+(a)Python
+(b)Java
+(c)C
+(d)C++
