@@ -8,9 +8,9 @@ public class Savequestion
 		int i=0;
 		String q="";
 		char ch;
-		FileWriter f= new FileWriter("c:/jprograms/file handeling/Question.txt",true);//file object for question file
+		FileWriter f= new FileWriter("./Question.txt",true);//file object for question file (change the file location where you want to save the file)
 		BufferedWriter bf=new BufferedWriter(f);
-		FileWriter f1= new FileWriter("c:/jprograms/file handeling/Answer.txt",true);// file object for answer file
+		FileWriter f1= new FileWriter("./Answer.txt",true);// file object for answer file(change the file location where you want to save the file)
 		BufferedWriter bf1=new BufferedWriter(f1);
 		Scanner sc=new Scanner(System.in);
 		

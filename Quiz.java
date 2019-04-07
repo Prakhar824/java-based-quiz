@@ -10,9 +10,9 @@ public class Quiz
 		int score=0;
 		char ch,ch1;
 		Scanner sc=new Scanner(System.in);
-		FileReader f= new FileReader("c:/jprograms/file handeling/Question.txt");//file object for question file(change the file location where the file is saved)
+		FileReader f= new FileReader("./Question.txt");//file object for question file(change the file location where the file is saved)
 		BufferedReader bf=new BufferedReader(f);
-		FileReader f1= new FileReader("c:/jprograms/file handeling/Answer.txt");// file object for answer file(change the file location where the file is saved)
+		FileReader f1= new FileReader("./Answer.txt");// file object for answer file(change the file location where the file is saved)
 		BufferedReader bf1=new BufferedReader(f1);
 		while(true)
 		{
