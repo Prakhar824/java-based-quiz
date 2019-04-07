@@ -98,9 +98,9 @@ public class Quiz
 	public static void main(String[] args) throws IOException
 	{
 		
-		FileReader file1= new FileReader("c:/jprograms/file handeling/Question.txt");//file object for question file(change the file location where the file is saved)
+		FileReader file1= new FileReader("../Question.txt");//file object for question file(change the file location where the file is saved)
 		BufferedReader bf=new BufferedReader(file1);
-		FileReader file2= new FileReader("c:/jprograms/file handeling/Answer.txt");// file object for answer file(change the file location where the file is saved)
+		FileReader file2= new FileReader("../Answer.txt");// file object for answer file(change the file location where the file is saved)
 		BufferedReader bf1=new BufferedReader(file2);
 		
 		Frame f=new Frame("Quiz");
