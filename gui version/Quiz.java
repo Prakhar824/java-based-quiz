@@ -2,22 +2,32 @@ import java.awt.*;
 import java.awt.event.*;  
 import java.io.*;
 import java.util.Scanner;
+import quiz.*;
 public class Quiz { 
 
 public static int count=0;
 public static int c=0; 
-public static void main(String[] args) throws IOException{ 
+public static int z=0;
+public static int a=0;
+public static String name="";
+
+public static void main(String[] args) throws IOException
+{ 
 	int i=0;
 	String s="Press next to start the quiz",s1="",s2="",s3="",s4="",s5="";
 	int score=0;
 	char ch,ch1;
 	Font myFont = new Font("Serif",Font.ITALIC,22);
-
+	MyLoginWindow m=new MyLoginWindow();
+	m.setSize(400,400);
 	//Scanner sc=new Scanner(System.in);
 	FileReader file1= new FileReader("../Question.txt");//file object for question file(change the file location where the file is saved)
 	BufferedReader bf=new BufferedReader(file1);
 	FileReader file2= new FileReader("../Answer.txt");// file object for answer file(change the file location where the file is saved)
 	BufferedReader bf1=new BufferedReader(file2);
+	FileReader file3= new FileReader("../Credentials.txt");// file object for answer file(change the file location where the file is saved)
+	BufferedReader bf3=new BufferedReader(file3);
+	
     Frame f=new Frame("Quiz");  
     Button b=new Button("next");
 	Button b1=new Button("Finish");
@@ -40,7 +50,7 @@ public static void main(String[] args) throws IOException{
     f.add(checkBox4);
 	f.setSize(1950,1080);  
 	f.setLayout(null);  
-	f.setVisible(true);
+	//f.setVisible(false);
 
 	
 		
@@ -61,7 +71,45 @@ public static void main(String[] args) throws IOException{
 		 checkBox4.setFont(myFont);
 		
 		 
-		 
+		 m.b1.addActionListener(new ActionListener()
+		 {  
+			public void actionPerformed(ActionEvent e)
+			{
+				
+				Quiz.z++;
+					if(z==4)
+					System.exit(0);
+				try
+				{
+				String s6="",s7="",name="",pass="";
+				//m.hide();
+				s6=bf3.readLine();
+				s7=bf3.readLine();
+				name=m.name.getText();
+				Quiz.name=m.name.getText();
+				pass=m.pass.getText();
+				if (s6.equals(name) && s7.equals(pass))
+				{
+					m.setVisible(false);
+					f.setVisible(true);
+					
+				}
+				else
+					m.notmatched();
+					m.name.setText("");
+					m.pass.setText("");
+				}
+				catch(IOException o)
+				{
+				}
+				catch(NullPointerException n)
+				{
+				}
+				
+			}
+		 });
+	
+		
 		 
 		 
 		
@@ -161,10 +209,14 @@ public static void main(String[] args) throws IOException{
 		  });  
 		  
 		  
-		   b1.addActionListener(new ActionListener()
-		 {  
+		b1.addActionListener(new ActionListener()
+		{
+			
 			public void actionPerformed(ActionEvent e)
 			{
+				Quiz.a++;
+				try
+				{
 				String s="";
 				s="Your score is "+Integer.toString(Quiz.count);
 				b.setVisible(false);
@@ -175,6 +227,19 @@ public static void main(String[] args) throws IOException{
 				l1.setVisible(false);
 				l2.setBounds(800,300,550,40);
 				l2.setText(s);
+				
+				if(a==1)
+				{
+				FileWriter file4= new FileWriter("../Score.txt",true);// file object for answer file(change the file location where the file is saved)
+				BufferedWriter bf4=new BufferedWriter(file4);
+				bf4.write(Quiz.name+" scored "+Integer.toString(Quiz.count));
+				bf4.write("\n");
+				bf4.close();
+				}
+				}
+				catch(IOException o)
+				{
+				}
 			}
 		 });
 		
@@ -185,11 +250,20 @@ public static void main(String[] args) throws IOException{
 			
          }
 		});
+		
+		m.addWindowListener(new WindowAdapter() {
+        public void windowClosing(WindowEvent we) {
+            System.exit(0);
+			
+         }
+		});
 	
     
 	
-	
+	//bf4.close();
     
 	
 }  
+
 }
+
