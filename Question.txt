@@ -1,15 +1,60 @@
-who is the present Prime Minister of India?
-(a) Jawahar lal Nehru
-(b) Narendra Modi
-(c) Pratibha patil
-(d) Shraddha Saini
-in which language this program is written?
-(a) c
-(b) c++
-(c) java
-(d) python
-Which is not object oriented programming language?
-(a)Python
-(b)Java
-(c)C
-(d)C++
+what is the sum of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
+what is the substraction of 2 and 3?
+(a) 4
+(b) -1
+(c) 6
+(d) 7
+what is the multiplication of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
+what is the sum of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
+what is the substraction of 2 and 3?
+(a) 4
+(b) -1
+(c) 6
+(d) 7
+what is the multiplication of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
+what is the sum of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
+what is the substraction of 2 and 3?
+(a) 4
+(b) -1
+(c) 6
+(d) 7
+what is the multiplication of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
+what is the sum of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
+what is the substraction of 2 and 3?
+(a) 4
+(b) -1
+(c) 6
+(d) 7
+what is the multiplication of 2 and 3?
+(a) 4
+(b) 5
+(c) 6
+(d) 7
